@@ -1,11 +1,13 @@
-function Nav({ linkList }: { linkList: IMainNavLink[] }) {
+import { cn } from "@/lib/utils"
+
+function Nav({ linkList, className }: INavProps) {
   return (
-    <nav>
-      <ul>
+    <nav className="max-w-56 self-end">
+      <ul className={'flex justify-between gap-x-6'}>
         {linkList.map((link) =>
           <li key={link.name}>
             <a href={link.url}>
-              <i className={link.icon}></i>
+              <i className={cn(link.icon, className)}></i>
             </a>
           </li>
         )}
