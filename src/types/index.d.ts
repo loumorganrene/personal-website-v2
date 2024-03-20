@@ -12,14 +12,21 @@ module Enums {
     JAVASCRIPT = "icon-js.svg",
     SASS = "icon-sass.svg",
     TYPESCRIPT = "icon-typescript.svg",
-    REACT = "icon-react.svg" ,
+    REACT = "icon-react.svg",
     REDUX = "icon-redux.svg",
     GIT = "icon-git.svg"
   }
   export default TechnologyIconType
+
+  enum SocialNetworkIconType {
+    Github = 'icon-github.svg',
+    LinkedIn = 'icon-linkedin.svg'
+  }
+
+  export default SocialNetworkIconType
 }
 
-interface IMainNavLinks {
+interface IMainNavLink {
   name: string;
   url: string;
   icon: Enums.MainNavIconType;
@@ -27,7 +34,7 @@ interface IMainNavLinks {
 
 interface ISectionProps {
   sectionName: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 interface IEducation {
@@ -42,7 +49,7 @@ interface IEducation {
   description: string;
 }
 
-interface IProjects {
+interface IProject {
   title: string;
   image: string;
   description: string;
@@ -50,7 +57,19 @@ interface IProjects {
   technologies: Enums.TechnologyIconType;
 }
 
-interface IFeedbacks {
+interface IContactFormFields {
+  fullName: string;
+  email: string;
+  message: string;
+}
+
+interface ISocialNetworkLink {
+  name: string;
+  url: string;
+  icon: Enums.SocialNetworkIconType;
+}
+
+interface IFeedback {
   authorName: string;
   authorSociety: string;
   message: string;

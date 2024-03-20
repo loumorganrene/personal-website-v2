@@ -1,11 +1,11 @@
-function Nav({linkList}: {linkList: IMainNavLinks[]}) {
+function Nav({ linkList }: { linkList: IMainNavLink[] }) {
   return (
     <nav>
       <ul>
-        {linkList.map((link) => 
+        {linkList.map((link) =>
           <li key={link.name}>
             <a href={link.url}>
-            <i className={link.icon}></i>
+              <i className={link.icon}></i>
             </a>
           </li>
         )}

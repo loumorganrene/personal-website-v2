@@ -4,7 +4,7 @@ function ProjectsPage() {
   return (
     <>
       <Section sectionName={"projects"}>
-        
+
       </Section>
     </>
   )

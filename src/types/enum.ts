@@ -21,8 +21,14 @@ enum TechnologyIconType {
   GIT = "icon-git.svg"
 }
 
+enum SocialNetworkIconType {
+  Github = 'icon-github.svg',
+  LinkedIn = 'icon-linkedin.svg'
+}
+
 export { 
   MainNavIconType as MainNavIconType, 
   SectionThemeList as SectionThemeList,
-  TechnologyIconType as TechnologyIconType 
+  TechnologyIconType as TechnologyIconType,
+  SocialNetworkIconType as SocialNetworkIconType 
 }
