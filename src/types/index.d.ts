@@ -63,6 +63,15 @@ interface IContactFormFields {
   message: string;
 }
 
+interface IProfessionalDetails {
+  firstName: string;
+  lastName: string;
+  address: string;
+  postalCode: number;
+  city: string;
+  country: string;
+}
+
 interface ISocialNetworkLink {
   name: string;
   url: string;

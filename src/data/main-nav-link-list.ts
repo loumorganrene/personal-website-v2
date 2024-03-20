@@ -1,6 +1,6 @@
 import { MainNavIconType } from "../types/enum"
 
-const mainNavLinkList: IMainNavLinks[] = [
+const mainNavLinkList: IMainNavLink[] = [
   {
     name: "education",
     url: "#education",
