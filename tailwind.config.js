@@ -18,6 +18,16 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        "home-page": "url('assets/backgrounds/background-homepage.svg')",
+        "education-page": "url('assets/backgrounds/background-educationpage.svg')",
+        "project-page": "url('assets/backgrounds/background-projectpage.svg')",
+        "contact-page": "url('assets/backgrounds/background-contactpage.svg')",
+        "feedback-page-mobile": "url('assets/backgrounds/background-feedbackpage-mobile.svg')",
+      },
+      backgroundPosition: {
+        "sm-left-bottom": "0% bottom"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

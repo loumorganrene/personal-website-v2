@@ -30,6 +30,7 @@ module Enums {
 interface ISectionProps {
   sectionName: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
 interface ILogoProps {

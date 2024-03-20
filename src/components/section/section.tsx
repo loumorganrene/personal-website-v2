@@ -1,8 +1,8 @@
-import { capitalizeWord } from "@/lib/utils"
+import { capitalizeWord, cn } from "@/lib/utils"
 
-function Section({sectionName, children}: ISectionProps) {
+function Section({ sectionName, children, className }: ISectionProps) {
   return (
-    <section id={sectionName}>
+    <section id={sectionName} className={cn('w-full h-screen', className)}>
       <h2>{capitalizeWord(sectionName)}</h2>
       {children}
     </section>

@@ -1,8 +1,9 @@
 function HomePage() {
   return (
-    <div>
-      
-    </div>
+    <section id="homepage" className="w-full h-screen bg-home-page bg-cover bg-center">
+      <h1>LOU PIERRE</h1>
+      <p>Frontend Developer</p>
+    </section>
   )
 }
 
