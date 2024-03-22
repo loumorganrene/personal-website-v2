@@ -23,10 +23,13 @@ export default {
         "education-page": "url('assets/backgrounds/background-educationpage.svg')",
         "project-page": "url('assets/backgrounds/background-projectpage.svg')",
         "contact-page": "url('assets/backgrounds/background-contactpage.svg')",
-        "feedback-page-mobile": "url('assets/backgrounds/background-feedbackpage-mobile.svg')",
+        "feedback-page-sm": "url('assets/backgrounds/background-feedbackpage.svg')",
+      },
+      backgroundSize: {
+        "150vh": "150vw"
       },
       backgroundPosition: {
-        "sm-left-bottom": "0% bottom"
+        contact: "15% bottom"
       },
       colors: {
         border: "hsl(var(--border))",
@@ -62,6 +65,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        transparent: 'transparent',
+        current: 'currentColor',
+        lpgreen: "#44D9B6",
+        lpred: "#BB2649",
+        lpgrey: "#808080"
       },
       borderRadius: {
         lg: "var(--radius)",
