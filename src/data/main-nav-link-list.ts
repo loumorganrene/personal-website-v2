@@ -15,6 +15,11 @@ const mainNavLinkList: IMainNavLink[] = [
     name: "contact",
     url: "#contact",
     icon: MainNavIconType.Envelope
+  },
+  {
+    name: "feedbacks",
+    url: "#feedbacks",
+    icon: MainNavIconType.Comment
   }
 ]
 

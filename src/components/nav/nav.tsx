@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 function Nav({ linkList, className }: INavProps) {
   return (
-    <nav className="max-w-56 self-end">
+    <nav className="max-w-full self-end">
       <ul className={'flex justify-between gap-x-6'}>
         {linkList.map((link) =>
           <li key={link.name}>
