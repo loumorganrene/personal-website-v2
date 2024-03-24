@@ -43,6 +43,13 @@ interface INavProps {
   className?: string;
 }
 
+interface IScrollButtonProps {
+  direction: string;
+  target: string;
+  size?: string;
+  className?: string;
+}
+
 // SECTIONS DATA MODEL
 
 interface IMainNavLink {

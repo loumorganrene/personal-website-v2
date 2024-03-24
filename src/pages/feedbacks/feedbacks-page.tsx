@@ -6,7 +6,7 @@ function FeedbacksPage() {
     <>
       <Section
         sectionName={"feedbacks"}
-        className="bg-feedback-page-sm bg-no-repeat bg-center !bg-150vh"
+        className="bg-feedback-page-sm bg-no-repeat bg-center !bg-150vw"
       >
         <SectionTitle title="feedbacks" className="border-lpred"/>
       </Section>

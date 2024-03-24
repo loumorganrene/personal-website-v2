@@ -26,10 +26,12 @@ export default {
         "feedback-page-sm": "url('assets/backgrounds/background-feedbackpage.svg')",
       },
       backgroundSize: {
-        "150vh": "150vw"
+        "150vw": "150vw",
+        "300vw": "250vw"
       },
       backgroundPosition: {
-        contact: "15% bottom"
+        contact: "15% bottom",
+        
       },
       colors: {
         border: "hsl(var(--border))",
@@ -69,7 +71,10 @@ export default {
         current: 'currentColor',
         lpgreen: "#44D9B6",
         lpred: "#BB2649",
-        lpgrey: "#808080"
+        lpgrey: "#808080",
+      },
+      dropShadow: {
+        "text-stroke": "3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000, 1px 1px 0 #000",
       },
       borderRadius: {
         lg: "var(--radius)",
