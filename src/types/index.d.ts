@@ -41,6 +41,7 @@ interface ILogoProps {
 interface INavProps {
   linkList: IMainNavLink[];
   className?: string;
+  sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> };
 }
 
 interface IScrollButtonProps {
