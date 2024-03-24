@@ -1,32 +1,16 @@
-import Header from "./components/header/header";
-import { useSectionRefs } from "./hooks/useSectionRefs";
-import ContactPage from "./pages/contact/contact-page";
-import EducationPage from "./pages/education/education-page";
-import FeedbacksPage from "./pages/feedbacks/feedbacks-page";
-import HomePage from "./pages/home/home-page";
-import ProjectsPage from "./pages/projects/projects-page";
-import { SectionRef } from "./types/enum";
+import Header from "./components/header/header"
+import { useSectionRefs } from "./hooks/useSectionRefs"
+import { handleScroll } from "./lib/utils"
+import ContactPage from "./pages/contact/contact-page"
+import EducationPage from "./pages/education/education-page"
+import FeedbacksPage from "./pages/feedbacks/feedbacks-page"
+import HomePage from "./pages/home/home-page"
+import ProjectsPage from "./pages/projects/projects-page"
+import { SectionRef } from "./types/enum"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
 
 function App() {
   const sectionRefs = useSectionRefs()
-  const handleScroll = (event: { deltaY: number }) => {
-    if ('deltaY' in event) {
-      if (event.deltaY > 0) {
-        // on scrolling down
-        window.scrollTo({
-          top: window.scrollY + window.innerHeight,
-          behavior: 'smooth'
-        });
-      } else {
-        // on scrolling up
-        window.scrollTo({
-          top: window.scrollY - window.innerHeight,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }
 
   return (
     <>

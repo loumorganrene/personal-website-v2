@@ -33,11 +33,15 @@ interface ISectionProps {
   className?: string;
 }
 
+interface ISectionTitleProps {
+  title: string;
+  className?: string;
+}
+
 interface ILogoProps {
   image: string;
   className?: string;
 }
-
 interface INavProps {
   linkList: IMainNavLink[];
   className?: string;
