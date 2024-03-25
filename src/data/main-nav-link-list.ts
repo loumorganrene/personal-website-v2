@@ -1,20 +1,25 @@
-import { MainNavIconType } from "../types/enum"
+import { MainNavIconType, SectionRef } from "../types/enum"
 
 const mainNavLinkList: IMainNavLink[] = [
   {
     name: "education",
-    url: "#education",
+    url: SectionRef.Education,
     icon: MainNavIconType.GraduationCap
   },
   {
     name: "projects",
-    url: "#projects",
+    url: SectionRef.Projects,
     icon: MainNavIconType.LaptopCode
   },
   {
     name: "contact",
-    url: "#contact",
+    url: SectionRef.Contact,
     icon: MainNavIconType.Envelope
+  },
+  {
+    name: "feedbacks",
+    url: SectionRef.Feedbacks,
+    icon: MainNavIconType.Comment
   }
 ]
 

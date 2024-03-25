@@ -26,15 +26,41 @@ module Enums {
   export default SocialNetworkIconType
 }
 
+// COMPONENT PROPS
+interface ISectionProps {
+  sectionName: string;
+  children?: React.ReactNode;
+  className?: string;
+}
+
+interface ISectionTitleProps {
+  title: string;
+  className?: string;
+}
+
+interface ILogoProps {
+  image: string;
+  className?: string;
+}
+interface INavProps {
+  linkList: IMainNavLink[];
+  className?: string;
+  sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> };
+}
+
+interface IScrollButtonProps {
+  direction: string;
+  target: string;
+  size?: string;
+  className?: string;
+}
+
+// SECTIONS DATA MODEL
+
 interface IMainNavLink {
   name: string;
   url: string;
   icon: Enums.MainNavIconType;
-}
-
-interface ISectionProps {
-  sectionName: string;
-  children?: React.ReactNode;
 }
 
 interface IEducation {

@@ -1,6 +1,6 @@
 function ErrorPage() {
   return (
-    <div>
+    <div className="container bg-home-page">
 
     </div>
   )

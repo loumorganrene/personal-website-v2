@@ -18,6 +18,21 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        "home-page": "url('assets/backgrounds/background-homepage.svg')",
+        "education-page": "url('assets/backgrounds/background-educationpage.svg')",
+        "project-page": "url('assets/backgrounds/background-projectpage.svg')",
+        "contact-page": "url('assets/backgrounds/background-contactpage.svg')",
+        "feedback-page-sm": "url('assets/backgrounds/background-feedbackpage.svg')",
+      },
+      backgroundSize: {
+        "150vw": "150vw",
+        "300vw": "250vw"
+      },
+      backgroundPosition: {
+        contact: "15% bottom",
+        
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -52,6 +67,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        transparent: 'transparent',
+        current: 'currentColor',
+        lpgreen: "#44D9B6",
+        lpred: "#BB2649",
+        lpgrey: "#808080",
+      },
+      dropShadow: {
+        "text-stroke": "3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000, 1px 1px 0 #000",
       },
       borderRadius: {
         lg: "var(--radius)",

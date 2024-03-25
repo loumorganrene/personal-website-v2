@@ -1,7 +1,8 @@
 enum MainNavIconType {
   GraduationCap = "fa-solid fa-graduation-cap",
   LaptopCode = "fa-solid fa-laptop-code",
-  Envelope = "fa-solid fa-envelope"
+  Envelope = "fa-solid fa-envelope",
+  Comment = "fa-regular fa-comment"
 }
 
 enum SectionThemeList {
@@ -26,9 +27,17 @@ enum SocialNetworkIconType {
   LinkedIn = 'icon-linkedin.svg'
 }
 
+enum SectionRef {
+  Education = "#education",
+  Projects = "#projects",
+  Contact = "#contact",
+  Feedbacks = "#feedbacks"
+}
+
 export { 
   MainNavIconType as MainNavIconType, 
   SectionThemeList as SectionThemeList,
   TechnologyIconType as TechnologyIconType,
-  SocialNetworkIconType as SocialNetworkIconType 
+  SocialNetworkIconType as SocialNetworkIconType, 
+  SectionRef as SectionRef
 }
