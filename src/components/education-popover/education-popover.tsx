@@ -1,15 +1,23 @@
-import { Popover, PopoverTrigger } from "@radix-ui/react-popover"
+import { Popover, PopoverContent, PopoverTrigger } from "@radix-ui/react-popover"
 import { Button, ButtonProps } from "../ui/button"
+import { cn } from "@/lib/utils"
 
-function EducationPopover({ variant, size, title, children, className }: ButtonProps) {
+interface IEducationPopover extends ButtonProps {
+  contentStyle?: string;
+  side?: "top" | "right" | "bottom" | "left"
+}
+
+function EducationPopover({ id, variant, size, title, children, className, contentStyle, side }: IEducationPopover) {
   return (
     <>
       <Popover>
-        <PopoverTrigger asChild className={className}>
-          <Button variant={variant} size={size}>{title}</Button>
+        <PopoverTrigger asChild className={cn("", className)}>
+          <Button id={id} variant={variant} size={size}>{title}</Button>
         </PopoverTrigger>
-          {children}
-      </Popover>
+        <PopoverContent side={side} sideOffset={1} className={contentStyle}>
+        {children}
+      </PopoverContent>
+    </Popover >
     </>
   )
 }
