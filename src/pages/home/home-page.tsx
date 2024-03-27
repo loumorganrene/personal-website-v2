@@ -14,7 +14,7 @@ function HomePage() {
         direction="down"
         target="#education"
         size="w-24 h-24"
-        className="self-center sticky bottom-0 animate-bounce"
+        className="self-center sticky bottom-0 motion-safe:animate-bounce"
       />
     </section>
   )
