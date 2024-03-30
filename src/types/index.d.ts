@@ -64,7 +64,7 @@ interface IMainNavLink {
 }
 
 interface IEducation {
-  workTitle: string;
+  workTitle?: string;
   startDate: number;
   endDate: number;
   school: {
@@ -72,7 +72,10 @@ interface IEducation {
     logo: string;
     url: string;
   }
-  description: string;
+  content: {
+    description: string;
+    skills: string[];
+  };
 }
 
 interface IProject {
