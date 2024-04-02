@@ -91,12 +91,12 @@ export default {
           to: { height: "0" },
         },
         "scale-down": {
-          "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(0.5)" },
+          "0%": { transform: "scale(1) translate(0, 0)" },
+          "100%": { transform: "scale(0.5) translate(0, 0)" },
         },
         "scale-up": {
-          "0%": { transform: "scale(0.5)" },
-          "100%": { transform: "scale(1)" },
+          "0%": { transform: "scale(0.5) translate(0, 0)" },
+          "100%": { transform: "scale(1) translate(0, 0)" },
         }
       },
       animation: {
