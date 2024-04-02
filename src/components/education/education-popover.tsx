@@ -9,18 +9,18 @@ interface IEducationPopover extends ButtonProps {
 }
 
 function EducationPopover({ id, variant, size, title, children, className, contentStyle, side }: IEducationPopover) {
-  const { isToggled, toggle, buttonRef } = useToggleState(false);
+  const { isToggled, toggle } = useToggleState(false);
 
   return (
     <>
-      <Popover>
-        <PopoverTrigger asChild className={cn("", className)}>
-          <Button ref={buttonRef} onClick={toggle} id={id} variant={variant} size={size} className={`${isToggled === true ? 'animate-scale-down' : 'animate-scale-up'}`}>{title}</Button>
+      <Popover onOpenChange={toggle}>
+        <PopoverTrigger asChild className={cn(isToggled === true ? 'z-10 transform origin-top-left animate-scale-down' : 'transform origin-top-left animate-scale-up', className)}>
+          <Button id={id} variant={variant} size={size} className={""}>{title}</Button>
         </PopoverTrigger>
-        <PopoverContent side={side} sideOffset={1} className={contentStyle}>
-        {children}
-      </PopoverContent>
-    </Popover >
+        <PopoverContent align={"start"} side={side} sideOffset={-135} className={cn(isToggled === true ? "z-0" : "", contentStyle)}>
+          {children}
+        </PopoverContent>
+      </Popover >
     </>
   )
 }

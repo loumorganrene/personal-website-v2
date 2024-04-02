@@ -4,16 +4,17 @@ import {
   CardDescription,
   CardHeader,
 } from "@/components/ui/card"
+import { cn } from "@/lib/utils"
 
-function EducationCard({ contents }: { contents: IEducation }) {
+function EducationCard({ contents, descClassName }: { contents: IEducation, descClassName?: string } ) {
   return (
     <>
       <Card className="w-96">
         <CardHeader>
-          <CardDescription className="flex justify-between align-baseline">
-            <p className="">
+          <CardDescription className={cn("flex justify-between align-baseline pl-10", descClassName)}>
+            <span className="">
               {contents.startDate} - {contents.endDate}
-            </p>
+            </span>
             <img
               className="w-5 h-5"
               src={`./src/assets/logos/` + contents.school.logo}
@@ -23,10 +24,10 @@ function EducationCard({ contents }: { contents: IEducation }) {
             </a>
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <p className="">
+        <CardContent className="pt-2">
+          {/* <p className="">
             {contents.content.description}
-          </p>
+          </p> */}
           <ul>
             {contents.content.skills?.map((skill) =>
               <li className="">
