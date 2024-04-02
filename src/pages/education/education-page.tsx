@@ -2,12 +2,10 @@ import React from 'react'
 import SectionTitle from "@/components/section/section-title"
 import Section from "@/components/section/section"
 import EducationPopover from '@/components/education/education-popover'
-import { useWindowDimensions } from '@/hooks/useWindowDimension'
 import EducationCard from '@/components/education/education-card'
 import educationList from '@/data/education-list'
 
 const EducationPage = React.forwardRef<HTMLDivElement>((_, forwardedRef) => {
-  useWindowDimensions()
   return (
     <>
       <Section sectionName="education" className="flex flex-col justify-between" ref={forwardedRef}>
