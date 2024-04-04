@@ -15,27 +15,27 @@ export function scrollToAnchor(ref: React.RefObject<HTMLDivElement>) {
   }
 }
 
-// export const handleScroll = (event: { deltaY: number }) => {
-//   if ('deltaY' in event) {
-//     if (event.deltaY > 0) {
-//       // on scrolling down
-//       window.scrollTo({
-//         top: window.scrollY + window.innerHeight,
-//         behavior: 'smooth'
-//       });
-//     } else {
-//       // on scrolling up
-//       window.scrollTo({
-//         top: window.scrollY - window.innerHeight,
-//         behavior: 'smooth'
-//       })
-//     }
-//   }
-// }
+export const handleScroll = (event: { deltaY: number }) => {
+  if ('deltaY' in event) {
+    if (event.deltaY > 0) {
+      // on scrolling down
+      window.scrollTo({
+        top: window.scrollY + window.innerHeight,
+        behavior: 'smooth'
+      });
+    } else {
+      // on scrolling up
+      window.scrollTo({
+        top: window.scrollY - window.innerHeight,
+        behavior: 'smooth'
+      })
+    }
+  }
+}
 
-// export const handleClick = (url: string, sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> }) => {
-//   const ref = sectionRefs[url]
-//   if (ref && ref.current) {
-//     scrollToAnchor(ref)
-//   }
-// }
+export const handleClick = (url: string, sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> }) => {
+  const ref = sectionRefs[url]
+  if (ref && ref.current) {
+    scrollToAnchor(ref)
+  }
+}

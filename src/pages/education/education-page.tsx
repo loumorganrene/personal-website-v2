@@ -15,11 +15,11 @@ const EducationPage = React.forwardRef<HTMLDivElement>((_, forwardedRef) => {
             <EducationCard contents={educationList[0]} />
           </EducationPopover>
 
-          <EducationPopover title="Web Developer" variant="green-bubble" size="circle" side="left" className="self-end origin-top-right " >
+          <EducationPopover title="Web Developer" variant="green-bubble" size="circle" contentStyle="self-end">
             <EducationCard contents={educationList[1]} descClassName='pl-0 pr-10' />
           </EducationPopover>
 
-          <EducationPopover title="Arts & Design" variant="grey-bubble" size="circle" side="right">
+          <EducationPopover title="Arts & Design" variant="grey-bubble" size="circle">
             <EducationCard contents={educationList[2]} />
           </EducationPopover>
         </div>

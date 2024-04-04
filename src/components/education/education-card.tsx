@@ -6,20 +6,25 @@ import {
 } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
-function EducationCard({ contents, descClassName }: { contents: IEducation, descClassName?: string } ) {
+function EducationCard({ contents, descClassName }: { contents: IEducation, descClassName?: string }) {
   return (
     <>
-      <Card className="w-96">
+      <Card className="w-85">
         <CardHeader>
-          <CardDescription className={cn("flex justify-between align-baseline pl-10", descClassName)}>
-            <span className="">
+          <CardDescription className={cn(
+            "flex align-baseline justify-between pl-10",
+            descClassName
+          )}>
+            <span>
               {contents.startDate} - {contents.endDate}
             </span>
-            <img
-              className="w-5 h-5"
-              src={`./src/assets/logos/` + contents.school.logo}
-              alt={contents.school.name + "logo"} />
-            <a href={contents.school?.url}>
+            <a
+              className="flex gap-2"
+              href={contents.school.url}>
+              <img
+                className="w-5 h-5"
+                src={`./src/assets/logos/` + contents.school.logo}
+                alt={contents.school.name + "logo"} />
               {contents.school.name}
             </a>
           </CardDescription>
