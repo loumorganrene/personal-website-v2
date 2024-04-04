@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 function EducationCard({ contents, descClassName }: { contents: IEducation, descClassName?: string }) {
   return (
     <>
-      <Card className="w-85">
+      <Card className="w-fit">
         <CardHeader>
           <CardDescription className={cn(
             "flex align-baseline justify-between pl-10",

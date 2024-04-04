@@ -4,15 +4,16 @@ import useToggleState from "@/hooks/useToggleState";
 import { cn } from "@/lib/utils";
 // import useToggleState from "@/hooks/useToggleState";
 interface IEducationPopover extends ButtonProps {
+  collapsibleStyle?: string;
   contentStyle?: string;
   side?: "top" | "right" | "bottom" | "left"
 }
-function EducationPopover({ id, variant, size, title, className, contentStyle, children }: IEducationPopover) {
+function EducationPopover({ id, variant, size, title, className, collapsibleStyle, contentStyle, children }: IEducationPopover) {
   const { open, toggle } = useToggleState(false);
 
   return (
     <>
-      <Collapsible onOpenChange={toggle} className={cn("relative", contentStyle)}>
+      <Collapsible onOpenChange={toggle} className={cn("relative", collapsibleStyle)}>
         <CollapsibleTrigger asChild >
           <Button
             id={id}
@@ -26,7 +27,7 @@ function EducationPopover({ id, variant, size, title, className, contentStyle, c
               className)}
           >{title}</Button>
         </CollapsibleTrigger>
-        <CollapsibleContent className={cn(open ? "z-0 absolute top-0 left-10 animate-scale-up" : "animate-scale-down",)}>
+        <CollapsibleContent className={cn("z-0 absolute top-0 ", open ? "overflow-hidden animate-scale-up" : "hidden", contentStyle)}>
           {children}
         </CollapsibleContent>
       </Collapsible>

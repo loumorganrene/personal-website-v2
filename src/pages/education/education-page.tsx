@@ -11,15 +11,15 @@ const EducationPage = React.forwardRef<HTMLDivElement>((_, forwardedRef) => {
       <Section sectionName="education" className="flex flex-col justify-between" ref={forwardedRef}>
         <SectionTitle title="education" className="border-lpred" />
         <div className="flex flex-col justify-around h-screen px-4">
-          <EducationPopover title="Front End Developer" variant="red-bubble" size="circle" side="right">
+          <EducationPopover title="Front End Developer" variant="red-bubble" size="circle" contentStyle='left-10'>
             <EducationCard contents={educationList[0]} />
           </EducationPopover>
 
-          <EducationPopover title="Web Developer" variant="green-bubble" size="circle" contentStyle="self-end">
+          <EducationPopover title="Web Developer" variant="green-bubble" size="circle" contentStyle='right-10 w-[80vw]' collapsibleStyle="self-end" className="origin-top-right">
             <EducationCard contents={educationList[1]} descClassName='pl-0 pr-10' />
           </EducationPopover>
 
-          <EducationPopover title="Arts & Design" variant="grey-bubble" size="circle">
+          <EducationPopover title="Arts & Design" variant="grey-bubble" size="circle" contentStyle='left-10'>
             <EducationCard contents={educationList[2]} />
           </EducationPopover>
         </div>
