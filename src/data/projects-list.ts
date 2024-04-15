@@ -1,6 +1,6 @@
 import { TechnologyIconType } from "../types/enum"
 
-const projectsList: IProjects[] = [
+const projectsList: IProject[] = [
   {
     title: "project1",
     image: "project1.jpg",
