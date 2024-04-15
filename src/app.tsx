@@ -9,7 +9,6 @@ import { SectionRef } from "./types/enum"
 
 function App() {
   const sectionRefs = useSectionRefs()
-
   //TO-DO: replace react-wheel-scroll-handler for fullpageJs
 
   return (

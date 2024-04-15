@@ -2,21 +2,23 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@radix-ui/r
 import { Button, ButtonProps } from "../ui/button";
 import useToggleState from "@/hooks/useToggleState";
 import { cn } from "@/lib/utils";
-// import useToggleState from "@/hooks/useToggleState";
-interface IEducationPopover extends ButtonProps {
+
+interface IEducationCollapsible extends ButtonProps {
   collapsibleStyle?: string;
   contentStyle?: string;
   side?: "top" | "right" | "bottom" | "left"
 }
-function EducationPopover({ id, variant, size, title, className, collapsibleStyle, contentStyle, children }: IEducationPopover) {
+function EducationCollapsible({ id, variant, size, title, className, collapsibleStyle, contentStyle, children }: IEducationCollapsible) {
   const { open, toggle } = useToggleState(false);
 
   return (
     <>
-      <Collapsible onOpenChange={toggle} className={cn("relative", collapsibleStyle)}>
+      <Collapsible
+        onOpenChange={toggle}
+        className={cn("relative", collapsibleStyle)} id={id}
+      >
         <CollapsibleTrigger asChild >
           <Button
-            id={id}
             variant={variant}
             size={size}
             className={cn(
@@ -27,7 +29,11 @@ function EducationPopover({ id, variant, size, title, className, collapsibleStyl
               className)}
           >{title}</Button>
         </CollapsibleTrigger>
-        <CollapsibleContent className={cn("z-0 absolute top-0 ", open ? "overflow-hidden animate-scale-up" : "hidden", contentStyle)}>
+        <CollapsibleContent
+          className={cn(
+            "z-0 absolute top-0 ",
+            open ? "overflow-hidden animate-scale-up" : "hidden", contentStyle)}
+        >
           {children}
         </CollapsibleContent>
       </Collapsible>
@@ -35,4 +41,4 @@ function EducationPopover({ id, variant, size, title, className, collapsibleStyl
   )
 }
 
-export default EducationPopover
+export default EducationCollapsible
