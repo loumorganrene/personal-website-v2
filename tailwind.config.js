@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      aspectRatio: {
+        "2/3": "2 / 3",
+      },
       backgroundImage: {
         "home-page": "url('assets/backgrounds/background-homepage.svg')",
         "education-page": "url('assets/backgrounds/background-educationpage.svg')",
