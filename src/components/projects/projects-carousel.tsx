@@ -36,9 +36,15 @@ function ProjectsCarousel() {
                     />
                   </CardContent>
                 </Card>
-                <div className="flex gap-2 justify-center pt-6">
+                <div className="flex gap-2 items-center justify-center pt-6">
                   {project.technologies.map((techno: string, index: number) =>
-                    <img key={"project-techno-" + index} src={techno} className={cn(techno === TechnologyIconType.REACT ? "brightness-0 invert": "" ,"w-16 h-16 drop-shadow-md ")}></img>
+                    <img
+                      key={"project-techno-" + index}
+                      src={techno}
+                      className={cn(
+                        "w-16 h-16 drop-shadow-md",
+                        techno === TechnologyIconType.REACT ? "brightness-0 invert" : "",
+                        techno === TechnologyIconType.JAVASCRIPT || techno === TechnologyIconType.TYPESCRIPT ? "w-14 h-14" : "")} />
                   )}
                 </div>
               </div>
