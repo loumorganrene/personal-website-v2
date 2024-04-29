@@ -25,25 +25,26 @@ const projectsList: IProject[] = [
   },
   {
     title: "Les petits plats",
-    image: "project3.png",
+    image: "project1.png",
     description: "Les petits plats is the prototype of a recipe website from a cookbook edition company. The project was focused on developping a highly performant search engine algorythm.",
     url: "https://loumorganrene.github.io/LesPetitsPlats/",
     technologies: [
       TechnologyIconType.HTML,
       TechnologyIconType.CSS,
       TechnologyIconType.JAVASCRIPT,
-      "Bootstrap" 
+      TechnologyIconType.BOOTSTRAP,  
     ],
   },
   {
     title: "Kasa",
-    image: "project3.jpg",
+    image: "project2.png",
     description: "Kasa is a  ",
     url: "https://github.com/loumorganrene/Kasa",
     technologies: [
       TechnologyIconType.HTML,
       TechnologyIconType.CSS,
       TechnologyIconType.REACT,
+      TechnologyIconType.REACTROUTER,
     ],
   },
 ]

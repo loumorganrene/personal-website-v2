@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+      variants: {
+        display: ["group-hover"],
+      },
       aspectRatio: {
         "2/3": "2 / 3",
       },

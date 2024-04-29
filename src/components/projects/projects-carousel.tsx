@@ -5,38 +5,42 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
 import projectsList from "@/data/projects-list"
 import { Card, CardContent } from "../ui/card"
-import { useEffect, useRef } from "react"
+import { cn } from "@/lib/utils"
+import { TechnologyIconType } from "@/types/enum"
 
 function ProjectsCarousel() {
-  const carouselItemRef = useRef<HTMLDivElement | null>(null)
 
-  useEffect(() => {
-    if (!carouselItemRef) {
-      return
-    }
-
-    if (carouselItemRef && carouselItemRef.current) {
-      carouselItemRef.current.addEventListener('mouseover', ()=> console.log("over") )
-      carouselItemRef.current.removeEventListener('mouseout', ()=> {})
-    }
-
-  }, [carouselItemRef])
   return (
     <>
-      <Carousel ref={carouselItemRef} opts={{ loop: true }} plugins={[Autoplay({ delay: 10000 })]} >
+      <Carousel opts={{ loop: true }} >
         <CarouselContent>
-          {projectsList.map((_, index) => (
-            <CarouselItem key={index} className="">
+          {projectsList.map((project, index) => (
+            <CarouselItem key={"carousel-item-" + index}>
               <div className="p-12 md:px-96">
                 <Card>
-                  <CardContent className="flex flex-col items-center justify-center p-6 aspect-2/3 md:aspect-auto md:h-[70svh]">
-                    {/* <h3>{projectsList[index].title.toUpperCase()}</h3> */}
-                    <img src={"/assets/projects/" + projectsList[index].image} alt={projectsList[index].title} className="object-cover h-full"/>
+                  <CardContent className="group relative flex flex-col items-center justify-center p-6 aspect-2/3 md:aspect-auto md:h-[70svh]">
+                    <div className="hidden group-hover:flex flex-col absolute p-6 w-full">
+                      <h3>
+                        {project.title.toUpperCase()}
+                      </h3>
+                      <p>
+                        {project.description}
+                      </p>
+                    </div>
+                    <img
+                      src={"/assets/projects/" + project.image}
+                      alt={project.title}
+                      className="object-cover h-full group-hover:blur-sm group-hover:opacity-25"
+                    />
                   </CardContent>
                 </Card>
+                <div className="flex gap-2 justify-center pt-6">
+                  {project.technologies.map((techno: string, index: number) =>
+                    <img key={"project-techno-" + index} src={techno} className={cn(techno === TechnologyIconType.REACT ? "brightness-0 invert": "" ,"w-16 h-16 drop-shadow-md ")}></img>
+                  )}
+                </div>
               </div>
             </CarouselItem>
           ))}
