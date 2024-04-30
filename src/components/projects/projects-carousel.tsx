@@ -17,19 +17,17 @@ function ProjectsCarousel() {
       <Carousel opts={{ loop: true }} >
         <CarouselContent>
           {projectsList.map((project, index) => (
-            <CarouselItem key={"carousel-item-" + index}>
+            <CarouselItem key={"carousel-item-" + index} className="md:max-h-[90svh]">
               <div className="p-12 md:px-96">
                 <Card className="rounded-[40px] shadow-md">
-                  <CardContent className="group relative flex flex-col items-center justify-center p-6 aspect-2/3 md:aspect-auto md:h-[70svh]">
-                    <div className="hidden group-hover:flex flex-col absolute p-6 w-full">
-                      <p>
-                        {project.description}
-                      </p>
-                    </div>
+                  <CardContent className="group relative flex flex-col items-center justify-center p-6 aspect-2/3 md:aspect-auto md:h-[55svh]">
+                    <p className="hidden group-hover:flex flex-col absolute p-6 w-full">
+                      {project.description}
+                    </p>
                     <img
                       src={"/assets/projects/" + project.image}
                       alt={project.title}
-                      className="object-cover h-full group-hover:blur-sm group-hover:opacity-25"
+                      className="object-contain h-full group-hover:blur-sm group-hover:opacity-25"
                     />
                   </CardContent>
                 </Card>
@@ -56,8 +54,8 @@ function ProjectsCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="-left-5 top-72 sm:left-72" />
-        <CarouselNext className="-right-5 top-72 sm:right-72" />
+        <CarouselPrevious className="top-[35svh] md:left-72" />
+        <CarouselNext className="top-[35svh] md:right-72" />
       </Carousel>
     </>
   )
