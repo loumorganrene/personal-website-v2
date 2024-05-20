@@ -1,8 +1,6 @@
 # Lou Morgan René PIERRE
 ## Frontend Developer
 
-<<<<<<< HEAD
-=======
 This repo is for training with libraries, Tailwind and typescript.
 
 ### WIP
@@ -11,7 +9,6 @@ Always mobile-first method ✨
 
 ### What's going on here ?
 
->>>>>>> afc5f54 (:memo: update: add repo purpose in README)
 Professional Website with
 
 - brief resume of my education background
