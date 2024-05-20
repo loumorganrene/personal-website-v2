@@ -1,8 +1,11 @@
 # Lou Morgan René PIERRE
 ## Frontend Developer
 
+This repo is for training with libraries, Tailwind and typescript.
+
 ### WIP
-Actually working on the mobile version first to obtain a solid base before making adjustement for desktop compatibility. Always mobile-first method ✨
+Actually working on the mobile version first to obtain a solid base before making adjustement for desktop compatibility. 
+Always mobile-first method ✨
 
 ### What's going on here ?
 
